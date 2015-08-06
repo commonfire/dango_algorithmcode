@@ -71,8 +71,9 @@ public class SortPractice {
 	 */
 	private static void quickSort(int[] a,int low,int high){
 		if(low >= high) return;
-		int first = low,last = high,key = a[first];
-		while(first < last){
+		int first = low,last = high,key = a[first];      //注意key值每次选取的是待排数组的第一个元素是a[first]，不是a[0]
+														 //low和high拷贝到first和last中，后续递归需要用到low和high值
+		while(first < last){ 
 			while(first < last&&a[last] >= key) --last;   //注意key是选择的first位置的，所以要从last开始，不能从first开始。
 			a[first] = a[last];                           //同时first<last是对内层while的限制，不与外层while的first<last冲突
 			while(first < last&&a[first] <= key) ++first;
