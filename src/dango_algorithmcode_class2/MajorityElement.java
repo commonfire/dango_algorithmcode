@@ -1,5 +1,9 @@
 package dango_algorithmcode_class2;
 
+/**
+ * @author zjd
+ * 找出数组中出现的次数超过一半的数字
+ */
 public class MajorityElement {
 	
 	/**

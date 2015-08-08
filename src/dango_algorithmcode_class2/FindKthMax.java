@@ -2,6 +2,10 @@ package dango_algorithmcode_class2;
 
 import java.util.ArrayList;
 
+/**
+ * @author zjd
+ * 找序列中第K大的数
+ */
 public class FindKthMax {
 	
 	private static int findKthMax(Integer[] a,int k,int low,int high){
