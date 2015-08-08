@@ -40,8 +40,8 @@ public class SortPractice {
 	 * @return    排好序的数组
 	 */
 	private static int[] insertSort(int[] a){
-		for(int i =1;i<a.length;i++){
-			for(int j=i;j>=1;j--){
+		for(int i = 1;i < a.length;i++){
+			for(int j= i;j >= 1;j--){   //注意从i开始到1，不断与前一个数比较
 				if(a[j]<a[j-1]) swap(a, j, j-1);
 				else break;
 			}
@@ -55,8 +55,8 @@ public class SortPractice {
 	 * @return   排好序的数组
 	 */
 	private static int[] bubbleSort(int[] a){
-		for(int i = 0;i+1<a.length;i++){
-			for(int j=1;j+i<a.length;j++){
+		for(int i = 0;i+1 < a.length;i++){         //注意边界条件，比较n-1轮
+			for(int j = 1;j+i < a.length;j++){     //注意边界条件，比较n-i次
 				if(a[j]<a[j-1]) swap(a, j, j-1);
 			}
 		}
@@ -73,7 +73,7 @@ public class SortPractice {
 		if(low >= high) return;
 		int first = low,last = high,key = a[first];      //注意key值每次选取的是待排数组的第一个元素是a[first]，不是a[0]
 														 //low和high拷贝到first和last中，后续递归需要用到low和high值
-		while(first < last){ 
+		while(first < last){   //产生多轮的交换
 			while(first < last&&a[last] >= key) --last;   //注意key是选择的first位置的，所以要从last开始，不能从first开始。
 			a[first] = a[last];                           //同时first<last是对内层while的限制，不与外层while的first<last冲突
 			while(first < last&&a[first] <= key) ++first;
