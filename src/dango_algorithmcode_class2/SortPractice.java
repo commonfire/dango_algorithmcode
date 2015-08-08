@@ -93,10 +93,12 @@ public class SortPractice {
 	 */
 	private static void mergeSort(int[] a,int[] tmp,int left,int right){
 		if(left >= right) return;
-		int mid = (left + right)/2;
+		int mid = (left + right)/2;          //获取中间值
 		mergeSort(a, tmp, left, mid);        //获得左边有序子序列
 		mergeSort(a, tmp, mid+1, right);     //获得右边有序子序列
+		
 		int p_final = left,p_left = left,p_right = mid + 1;
+		
 		while(p_left<=mid||p_right<=right){   //此处用或，考虑到左子序列或右子序列可能为空
 			if(p_left<=mid&&(p_right>right||a[p_left]<=a[p_right])){
 				tmp[p_final] = a[p_left];     //取左边子序列中最小的赋值到tmp
