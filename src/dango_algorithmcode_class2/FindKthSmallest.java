@@ -1,6 +1,7 @@
 package dango_algorithmcode_class2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * @author zjd
@@ -59,13 +60,15 @@ public class FindKthSmallest {
 		}	
 	}
 	
+
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		Integer[] a = new Integer[]{6,2,4,1};
 //		System.out.println(findKthSmallest(a, 2, 0, a.length-1));
-		int[] a = new int[]{6,2,4,1};
-		System.out.println(new FindKthSmallest().findKthSmallest2(a, 1, 0, a.length-1));
+//		int[] a = new int[]{6,2,4,1};
+//		System.out.println(new FindKthSmallest().findKthSmallest2(a, 1, 0, a.length-1));		
+		
 	}
 
 }
