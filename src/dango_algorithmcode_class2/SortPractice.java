@@ -27,9 +27,9 @@ public class SortPractice {
 					min = a[j];     //更新“最小”值
 					position = j;   //更新“最小”位置
 				}
-				a[position] = a[i];
-				a[i] = min; 
 			}
+			a[position] = a[i];
+			a[i] = min; 
 		}	
 		return a;
 	}
